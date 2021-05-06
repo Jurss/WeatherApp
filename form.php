@@ -149,10 +149,10 @@
                     <h3>Aujourd'hui</h3>
                     <div class="iconeWeather">
                         <?php echo getIcons($currentWeather['data'][0]['weather']['icon']); ?>
-                        <p>Minimal / Maximal<br> prévue: <br> <?php echo $weatherForecast6Day['data'][0]['min_temp']; ?> / <?php echo $weatherForecast6Day['data'][1]['max_temp']; ?>°</p>
-                        <p> Température Actuel :<br> <?php echo $currentWeather['data'][0]['temp'];?>°</p>
-                        <p>Levé /Couché du soleil :<br> <?php getSunriseTime($weatherForecast6Day, 0);?> / <?php getSunsetTime($weatherForecast6Day, 0);?></p>
-                        <p>Vent : <br><?php getWindDirectionIcon($currentWeather['data'][0]['wind_cdir_full']); ?> <?php  formatWindSpeed($currentWeather['data'][0]['wind_spd']); ?>km/h</p>
+                        <p><strong> Minimal / Maximal<br> prévue:</strong> <br> <?php echo $weatherForecast6Day['data'][0]['min_temp']; ?> / <?php echo $weatherForecast6Day['data'][1]['max_temp']; ?>°</p>
+                        <p><strong> Température Actuel :</strong><br> <?php echo $currentWeather['data'][0]['temp'];?>°</p>
+                        <p><strong>Levé /Couché du soleil :</strong><br> <?php getSunriseTime($weatherForecast6Day, 0);?> / <?php getSunsetTime($weatherForecast6Day, 0);?></p>
+                        <p><strong>Vent :</strong> <br><?php getWindDirectionIcon($currentWeather['data'][0]['wind_cdir_full']); ?> <?php  formatWindSpeed($currentWeather['data'][0]['wind_spd']); ?>km/h</p>
                     </div>
                 </div>
 
@@ -160,11 +160,11 @@
                     <h3>Demain</h3>
                     <div class="iconeWeather">
                         <?php echo getIcons($weatherData[1]); ?>
-                        <p>Minimal : <?php echo $weatherForecast6Day['data'][1]['min_temp'];?>°</p>
-                        <p>Maximal : <?php echo $weatherForecast6Day['data'][1]['max_temp'];?>°</p>
-                        <p>Levé /Couché du soleil :<br> <?php getSunriseTime($weatherForecast6Day, 1);?> / <?php getSunsetTime($weatherForecast6Day, 1);?></p>
-                        <p>Risque de précipitations : <br> <?php echo $weatherForecast6Day['data'][1]['pop']; ?>%</p>
-                        <p>Couverture nuageuse<br> moyenne :<br><?php echo $weatherForecast6Day['data'][1]['clouds'] ?>%</p>
+                        <p><strong>Minimal :</strong> <?php echo $weatherForecast6Day['data'][1]['min_temp'];?>°</p>
+                        <p><strong>Maximal :</strong> <?php echo $weatherForecast6Day['data'][1]['max_temp'];?>°</p>
+                        <p><strong>Levé /Couché du soleil :</strong><br> <?php getSunriseTime($weatherForecast6Day, 1);?> / <?php getSunsetTime($weatherForecast6Day, 1);?></p>
+                        <p><strong>Risque de précipitations :</strong> <br> <?php echo $weatherForecast6Day['data'][1]['pop']; ?>%</p>
+                        <p><strong>Couverture nuageuse<br> moyenne :</strong><br><?php echo $weatherForecast6Day['data'][1]['clouds'] ?>%</p>
                     </div>
                 </div>
 
@@ -172,11 +172,11 @@
                     <h3>le <?php formatDate(2); ?></h3>
                     <div class="iconeWeather">
                         <?php echo getIcons($weatherData[2]); ?>
-                        <p>Minimal : <?php echo $weatherForecast6Day['data'][2]['min_temp'];?>°</p>
-                        <p>Maximal : <?php echo $weatherForecast6Day['data'][2]['max_temp'];?>°</p>
-                        <p>Levé /Couché du soleil :<br> <?php getSunriseTime($weatherForecast6Day, 2);?> / <?php getSunsetTime($weatherForecast6Day, 2);?></p>
-                        <p>Risque de précipitations : <br> <?php echo $weatherForecast6Day['data'][2]['pop']; ?>%</p>
-                        <p>Couverture nuageuse<br> moyenne :<br><?php echo $weatherForecast6Day['data'][2]['clouds'] ?>%</p>
+                        <p><strong>Minimal : </strong><?php echo $weatherForecast6Day['data'][2]['min_temp'];?>°</p>
+                        <p><strong>Maximal :</strong> <?php echo $weatherForecast6Day['data'][2]['max_temp'];?>°</p>
+                        <p><strong>Levé /Couché du soleil :</strong><br> <?php getSunriseTime($weatherForecast6Day, 2);?> / <?php getSunsetTime($weatherForecast6Day, 2);?></p>
+                        <p><strong>Risque de précipitations :</strong> <br> <?php echo $weatherForecast6Day['data'][2]['pop']; ?>%</p>
+                        <p><strong>Couverture nuageuse<br> moyenne :</strong><br><?php echo $weatherForecast6Day['data'][2]['clouds'] ?>%</p>
                     </div>
                 </div>
 
@@ -184,11 +184,11 @@
                     <h3>le <?php formatDate(3); ?></h3>
                     <div class="iconeWeather">
                         <?php echo getIcons($weatherData[3]); ?>
-                        <p>Minimal : <?php echo $weatherForecast6Day['data'][3]['min_temp'];?>°</p>
-                        <p>Maximal : <?php echo $weatherForecast6Day['data'][3]['max_temp'];?>°</p>
-                        <p>Levé /Couché du soleil :<br> <?php getSunriseTime($weatherForecast6Day, 3);?> / <?php getSunsetTime($weatherForecast6Day, 3);?></p>
-                        <p>Risque de précipitations : <br> <?php echo $weatherForecast6Day['data'][3]['pop']; ?>%</p>
-                        <p>Couverture nuageuse<br> moyenne :<br><?php echo $weatherForecast6Day['data'][3]['clouds'] ?>%</p>
+                        <p><strong>Minimal :</strong> <?php echo $weatherForecast6Day['data'][3]['min_temp'];?>°</p>
+                        <p><strong>Maximal :</strong> <?php echo $weatherForecast6Day['data'][3]['max_temp'];?>°</p>
+                        <p><strong>Levé /Couché du soleil :</strong><br> <?php getSunriseTime($weatherForecast6Day, 3);?> / <?php getSunsetTime($weatherForecast6Day, 3);?></p>
+                        <p><strong>Risque de précipitations :</strong> <br> <?php echo $weatherForecast6Day['data'][3]['pop']; ?>%</p>
+                        <p><strong>Couverture nuageuse<br> moyenne :</strong><br><?php echo $weatherForecast6Day['data'][3]['clouds'] ?>%</p>
                     </div>
                 </div>
 
@@ -196,11 +196,11 @@
                     <h3>le <?php formatDate(4); ?></h3>
                     <div class="iconeWeather">
                         <?php echo getIcons($weatherData[4]); ?>
-                        <p>Minimal : <?php echo $weatherForecast6Day['data'][4]['min_temp'];?>°</p>
-                        <p>Maximal : <?php echo $weatherForecast6Day['data'][4]['max_temp'];?>°</p>
-                        <p>Levé /Couché du soleil :<br> <?php getSunriseTime($weatherForecast6Day, 4);?> / <?php getSunsetTime($weatherForecast6Day, 4);?></p>
-                        <p>Risque de précipitations : <br> <?php echo $weatherForecast6Day['data'][4]['pop']; ?>%</p>
-                        <p>Couverture nuageuse<br> moyenne :<br><?php echo $weatherForecast6Day['data'][4]['clouds'] ?>%</p>
+                        <p><strong>Minimal :</strong> <?php echo $weatherForecast6Day['data'][4]['min_temp'];?>°</p>
+                        <p><strong>Maximal :</strong> <?php echo $weatherForecast6Day['data'][4]['max_temp'];?>°</p>
+                        <p><strong>Levé /Couché du soleil :</strong><br> <?php getSunriseTime($weatherForecast6Day, 4);?> / <?php getSunsetTime($weatherForecast6Day, 4);?></p>
+                        <p><strong>Risque de précipitations : </strong><br> <?php echo $weatherForecast6Day['data'][4]['pop']; ?>%</p>
+                        <p><strong>Couverture nuageuse<br> moyenne :</strong><br><?php echo $weatherForecast6Day['data'][4]['clouds'] ?>%</p>
                     </div>
                 </div>
 
@@ -208,11 +208,11 @@
                     <h3>le <?php formatDate(5); ?></h3>
                     <div class="iconeWeather">
                         <?php echo getIcons($weatherData[5]); ?>
-                        <p>Minimal : <?php echo $weatherForecast6Day['data'][5]['min_temp'];?>°</p>
-                        <p>Maximal : <?php echo $weatherForecast6Day['data'][5]['max_temp'];?>°</p>
-                        <p>Levé /Couché du soleil :<br> <?php getSunriseTime($weatherForecast6Day, 5);?> / <?php getSunsetTime($weatherForecast6Day, 5);?></p>
-                        <p>Risque de précipitations : <br> <?php echo $weatherForecast6Day['data'][5]['pop']; ?>%</p>
-                        <p>Couverture nuageuse<br> moyenne :<br><?php echo $weatherForecast6Day['data'][5]['clouds'] ?>%</p>
+                        <p><strong>Minimal :</strong> <?php echo $weatherForecast6Day['data'][5]['min_temp'];?>°</p>
+                        <p><strong>Maximal :</strong> <?php echo $weatherForecast6Day['data'][5]['max_temp'];?>°</p>
+                        <p><strong>Levé /Couché du soleil :</strong><br> <?php getSunriseTime($weatherForecast6Day, 5);?> / <?php getSunsetTime($weatherForecast6Day, 5);?></p>
+                        <p><strong>Risque de précipitations :</strong> <br> <?php echo $weatherForecast6Day['data'][5]['pop']; ?>%</p>
+                        <p><strong>Couverture nuageuse<br> moyenne :</strong><br><?php echo $weatherForecast6Day['data'][5]['clouds'] ?>%</p>
                     </div>
                 </div>
 
@@ -220,11 +220,11 @@
                     <h3>le <?php formatDate(6); ?></h3>
                     <div class="iconeWeather">
                         <?php echo getIcons($weatherData[6]); ?>
-                        <p>Minimal : <?php echo $weatherForecast6Day['data'][6]['min_temp'];?>°</p>
-                        <p>Maximal : <?php echo $weatherForecast6Day['data'][6]['max_temp'];?>°</p>
-                        <p>Levé /Couché du soleil :<br> <?php getSunriseTime($weatherForecast6Day, 6);?> / <?php getSunsetTime($weatherForecast6Day, 6);?></p>
-                        <p>Risque de précipitations : <br> <?php echo $weatherForecast6Day['data'][6]['pop']; ?>%</p>
-                        <p>Couverture nuageuse<br> moyenne :<br><?php echo $weatherForecast6Day['data'][6]['clouds'] ?>%</p>
+                        <p><strong>Minimal :</strong> <?php echo $weatherForecast6Day['data'][6]['min_temp'];?>°</p>
+                        <p><strong>Maximal :</strong> <?php echo $weatherForecast6Day['data'][6]['max_temp'];?>°</p>
+                        <p><strong>Levé /Couché du soleil :</strong><br> <?php getSunriseTime($weatherForecast6Day, 6);?> / <?php getSunsetTime($weatherForecast6Day, 6);?></p>
+                        <p><strong>Risque de précipitations :</strong> <br> <?php echo $weatherForecast6Day['data'][6]['pop']; ?>%</p>
+                        <p><strong>Couverture nuageuse<br> moyenne :</strong><br><?php echo $weatherForecast6Day['data'][6]['clouds'] ?>%</p>
                     </div>
                 </div>
             </div>

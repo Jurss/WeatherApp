@@ -148,10 +148,10 @@
                         <h3>Aujourd'hui</h3>
                         <div class="iconeWeather">
                             <?php echo getIcons($currentWeather['data'][0]['weather']['icon']); ?>
-                            <p>Minimal / Maximal : <br> <?php echo $weatherForecast6Day['data'][0]['min_temp']; ?> / <?php echo $weatherForecast6Day['data'][1]['max_temp']; ?>°</p>
-                            <p> Température Actuel :<br> <?php echo $currentWeather['data'][0]['temp'];?>°</p>
-                            <p>Levé /Couché du soleil :<br> <?php getSunriseTime($weatherForecast6Day, 0);?> / <?php getSunsetTime($weatherForecast6Day, 0);?></p>
-                            <p>Vent : <br><?php getWindDirectionIcon($currentWeather['data'][0]['wind_cdir_full']); ?> <?php  formatWindSpeed($currentWeather['data'][0]['wind_spd']); ?>km/h</p>
+                            <p><strong>Maximmal / Maximal :</strong> <br> <?php echo $weatherForecast6Day['data'][0]['min_temp']; ?> / <?php echo $weatherForecast6Day['data'][1]['max_temp']; ?>°</p>
+                            <p><strong>Température Actuel :</strong><br> <?php echo $currentWeather['data'][0]['temp'];?>°</p>
+                            <p><strong>Lévé/Couché du soleil :</strong><br> <?php getSunriseTime($weatherForecast6Day, 0);?> / <?php getSunsetTime($weatherForecast6Day, 0);?></p>
+                            <p><strong>Vent :</strong> <br><?php getWindDirectionIcon($currentWeather['data'][0]['wind_cdir_full']); ?> <?php  formatWindSpeed($currentWeather['data'][0]['wind_spd']); ?>km/h</p>
                         </div>
                     </div>
                 </div>
