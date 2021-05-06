@@ -68,14 +68,69 @@ main{
 }
 
 #gridPrevision{
-    display: flex;
-    justify-content: center;
+    width: 75vw;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 7;
+    grid-template-rows: 1fr;
+    grid-template-areas: "d1 d2 d3 d4 d5 d6 d7";
 }
 
 #currentDay{
+    grid-area: d1;
     border: 1px solid black;
-    border-radius: 12px;
+    border-radius: 12px 0 12px 12px;
     background-color: rgba(255, 255, 255, 0.89);
     text-align: center;
-    width: 25vw;
+}
+
+#day2{
+    grid-area: d2;
+    border: 1px solid black;
+    border-radius: 0 0 12px 12px;
+    background-color: rgba(255, 255, 255, 0.89);
+    text-align: center;
+}
+#day3{
+    grid-area: d3;
+    border: 1px solid black;
+    border-radius: 0 0 12px 12px;
+    background-color: rgba(255, 255, 255, 0.89);
+    text-align: center;
+}
+#day4{
+    grid-area: d4;
+    border: 1px solid black;
+    border-radius: 0 0 12px 12px;
+    background-color: rgba(255, 255, 255, 0.89);
+    text-align: center;
+}
+#day5{
+    grid-area: d5;
+    border: 1px solid black;
+    border-radius: 0 0 12px 12px;
+    background-color: rgba(255, 255, 255, 0.89);
+    text-align: center;
+}
+#day6{
+    grid-area: d6;
+    border: 1px solid black;
+    border-radius: 0 0 12px 12px;
+    background-color: rgba(255, 255, 255, 0.89);
+    text-align: center;
+}
+#day7{
+    grid-area: d7;
+    border: 1px solid black;
+    border-radius: 0 12px 12px 12px;
+    background-color: rgba(255, 255, 255, 0.89);
+    text-align: center;
+}
+
+h3{
+    border-bottom: 1px solid black;
+}
+
+.iconeWeather img{
+    max-height: 50px;
 }

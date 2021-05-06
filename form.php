@@ -65,7 +65,7 @@
     //for insert in HTML
     function getIcons($data){
         $codeIcon = 'img/icons/'.$data.'.png';
-        echo '<img src="'.$codeIcon.'">';
+        return '<img src="'.$codeIcon.'">';
     }
 
     function getWindDirectionIcon($data){
@@ -116,8 +116,13 @@
     <html lang="fr">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Rémi Dutombois">
+        <meta name="description" content="7 days weather forecast">
+        <meta name="canonical" href="">
         <title>Météo</title>
-        <link rel="stylesheet" href="index.css?v=<?php echo time(); ?>">
+        <link rel="icon" href="img/icons/c02d.png">
+        <link rel="stylesheet" href="form.css?v=<?php echo time(); ?>">
     </head>
     <body>
     <header id="search">
@@ -136,7 +141,7 @@
                 <div id="currentDay">
                     <h3>Aujourd'hui</h3>
                     <div class="iconeWeather">
-                        <?php getIcons($currentWeather['data'][0]['weather']['icon']); ?>
+                        <?php echo getIcons($currentWeather['data'][0]['weather']['icon']); ?>
                         <p>Minimal / Maximal : <br> <?php echo $weatherForecast6Day['data'][0]['min_temp']; ?> / <?php echo $weatherForecast6Day['data'][1]['max_temp']; ?>°</p>
                         <p> Température Actuel :<br> <?php echo $currentWeather['data'][0]['temp'];?>°</p>
                         <p>Levé /Couché du soleil :<br> <?php getSunriseTime($weatherForecast6Day, 0);?> / <?php getSunsetTime($weatherForecast6Day, 0);?></p>
@@ -147,7 +152,7 @@
                 <div id="day2">
                     <h3>Demain</h3>
                     <div class="iconeWeather">
-                        <?php getIcons($weatherData[1]); ?>
+                        <?php echo getIcons($weatherData[1]); ?>
                         <p>Minimal : <?php echo $weatherForecast6Day['data'][1]['min_temp'];?>°</p>
                         <p>Maximal : <?php echo $weatherForecast6Day['data'][1]['max_temp'];?>°</p>
                         <p>Levé /Couché du soleil :<br> <?php getSunriseTime($weatherForecast6Day, 1);?> / <?php getSunsetTime($weatherForecast6Day, 1);?></p>
@@ -159,7 +164,7 @@
                 <div id="day3">
                     <h3>le <?php formatDate(2); ?></h3>
                     <div class="iconeWeather">
-                        <?php getIcons($weatherData[2]); ?>
+                        <?php echo getIcons($weatherData[2]); ?>
                         <p>Minimal : <?php echo $weatherForecast6Day['data'][2]['min_temp'];?>°</p>
                         <p>Maximal : <?php echo $weatherForecast6Day['data'][2]['max_temp'];?>°</p>
                         <p>Levé /Couché du soleil :<br> <?php getSunriseTime($weatherForecast6Day, 2);?> / <?php getSunsetTime($weatherForecast6Day, 2);?></p>
@@ -171,7 +176,7 @@
                 <div id="day4">
                     <h3>le <?php formatDate(3); ?></h3>
                     <div class="iconeWeather">
-                        <?php getIcons($weatherData[3]); ?>
+                        <?php echo getIcons($weatherData[3]); ?>
                         <p>Minimal : <?php echo $weatherForecast6Day['data'][3]['min_temp'];?>°</p>
                         <p>Maximal : <?php echo $weatherForecast6Day['data'][3]['max_temp'];?>°</p>
                         <p>Levé /Couché du soleil :<br> <?php getSunriseTime($weatherForecast6Day, 3);?> / <?php getSunsetTime($weatherForecast6Day, 3);?></p>
@@ -183,7 +188,7 @@
                 <div id="day5">
                     <h3>le <?php formatDate(4); ?></h3>
                     <div class="iconeWeather">
-                        <?php getIcons($weatherData[4]); ?>
+                        <?php echo getIcons($weatherData[4]); ?>
                         <p>Minimal : <?php echo $weatherForecast6Day['data'][4]['min_temp'];?>°</p>
                         <p>Maximal : <?php echo $weatherForecast6Day['data'][4]['max_temp'];?>°</p>
                         <p>Levé /Couché du soleil :<br> <?php getSunriseTime($weatherForecast6Day, 4);?> / <?php getSunsetTime($weatherForecast6Day, 4);?></p>
@@ -195,7 +200,7 @@
                 <div id="day6">
                     <h3>le <?php formatDate(5); ?></h3>
                     <div class="iconeWeather">
-                        <?php getIcons($weatherData[5]); ?>
+                        <?php echo getIcons($weatherData[5]); ?>
                         <p>Minimal : <?php echo $weatherForecast6Day['data'][5]['min_temp'];?>°</p>
                         <p>Maximal : <?php echo $weatherForecast6Day['data'][5]['max_temp'];?>°</p>
                         <p>Levé /Couché du soleil :<br> <?php getSunriseTime($weatherForecast6Day, 5);?> / <?php getSunsetTime($weatherForecast6Day, 5);?></p>
@@ -207,7 +212,7 @@
                 <div id="day7">
                     <h3>le <?php formatDate(6); ?></h3>
                     <div class="iconeWeather">
-                        <?php getIcons($weatherData[6]); ?>
+                        <?php echo getIcons($weatherData[6]); ?>
                         <p>Minimal : <?php echo $weatherForecast6Day['data'][6]['min_temp'];?>°</p>
                         <p>Maximal : <?php echo $weatherForecast6Day['data'][6]['max_temp'];?>°</p>
                         <p>Levé /Couché du soleil :<br> <?php getSunriseTime($weatherForecast6Day, 6);?> / <?php getSunsetTime($weatherForecast6Day, 6);?></p>
