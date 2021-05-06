@@ -2,7 +2,7 @@
     require_once('geoplugin.class/geoplugin.class.php');
 
     $geoplugin = new geoPlugin();
-    $geoplugin->locate('92.140.59.79');//$_SERVER['REMOTE_ADDR']
+    $geoplugin->locate($_SERVER['REMOTE_ADDR']);
 
     $location = $geoplugin->city;
     $country = $geoplugin->countryCode;
@@ -125,7 +125,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Rémi Dutombois">
         <meta name="description" content="7 days weather forecast">
-        <meta name="canonical" href="">
+        <meta name="canonical" href="https://WeatherApp.herokuapp.com/">
         <title>Météo</title>
         <link rel="icon" href="img/icons/c02d.png">
         <link rel="stylesheet" href="index.css?v=<?php echo time(); ?>">

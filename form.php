@@ -123,7 +123,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Rémi Dutombois">
         <meta name="description" content="7 days weather forecast">
-        <meta name="canonical" href="">
+        <meta name="canonical" href="https://WeatherApp.herokuapp.com/">
         <title>Météo</title>
         <link rel="icon" href="img/icons/c02d.png">
         <link rel="stylesheet" href="form.css?v=<?php echo time(); ?>">
