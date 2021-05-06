@@ -1,5 +1,9 @@
 <?php
 
+    require_once('geoplugin.class/geoplugin.class.php');
+    $geoplugin = new geoPlugin();
+    $geoplugin->locate($_SERVER['REMOTE_ADDR']);
+
     $location = $_POST['city'];
     $country = '';
 
@@ -126,6 +130,9 @@
     </head>
     <body>
     <header id="search">
+        <div id="home">
+            <a href="index.php"><img src="img/home1.svg" alt="Home icon" height="40px" width="40px"></a>
+        </div>
         <form action="form.php" method="post" enctype="multipart/form-data" id="barSearch">
             <label for="city"></label>
             <input type="text" name="city" id="city" placeholder="Recherchez une ville">
@@ -136,13 +143,13 @@
     </header>
     <main>
         <div id="ResultContainer">
-            <h2 id="cityName"> Metéo à <?php echo $weatherForecast6Day['city_name'] ?> </h2>
+            <h2 id="cityName"> Metéo à <?php echo $weatherForecast6Day['city_name'] ?> (<?php echo $geoplugin->regionCode ?>)</h2>
             <div id="gridPrevision">
                 <div id="currentDay">
                     <h3>Aujourd'hui</h3>
                     <div class="iconeWeather">
                         <?php echo getIcons($currentWeather['data'][0]['weather']['icon']); ?>
-                        <p>Minimal / Maximal : <br> <?php echo $weatherForecast6Day['data'][0]['min_temp']; ?> / <?php echo $weatherForecast6Day['data'][1]['max_temp']; ?>°</p>
+                        <p>Minimal / Maximal<br> prévue: <br> <?php echo $weatherForecast6Day['data'][0]['min_temp']; ?> / <?php echo $weatherForecast6Day['data'][1]['max_temp']; ?>°</p>
                         <p> Température Actuel :<br> <?php echo $currentWeather['data'][0]['temp'];?>°</p>
                         <p>Levé /Couché du soleil :<br> <?php getSunriseTime($weatherForecast6Day, 0);?> / <?php getSunsetTime($weatherForecast6Day, 0);?></p>
                         <p>Vent : <br><?php getWindDirectionIcon($currentWeather['data'][0]['wind_cdir_full']); ?> <?php  formatWindSpeed($currentWeather['data'][0]['wind_spd']); ?>km/h</p>

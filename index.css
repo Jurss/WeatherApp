@@ -1,6 +1,7 @@
 body{
     margin: 0;
     background-image: url("img/sun-cloud-729064_1920.jpg");
+    font-family: Calibri;
 }
 
 #search{
@@ -60,11 +61,15 @@ main{
 }
 
 #cityName{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 45px;
     border: 1px solid black;
     border-radius: 12px 12px 0 0;
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.89);
 }
 
 #gridPrevision{
@@ -78,4 +83,25 @@ main{
     background-color: rgba(255, 255, 255, 0.89);
     text-align: center;
     width: 25vw;
+}
+
+#hiddenForm{
+    text-align: center;
+}
+
+@media screen and (max-width: 700px){
+    #currentDay{
+        width: 180px;
+    }
+}
+
+@media screen and (max-width: 550px){
+    #cityName{
+        height: 65px;
+    }
+}
+@media screen and (max-width: 200px){
+    #cityName{
+        height: 90px;
+    }
 }

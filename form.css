@@ -1,15 +1,20 @@
 body{
     margin: 0;
     background-image: url("img/sun-cloud-729064_1920.jpg");
+    font-family: Calibri;
 }
 
 #search{
     overflow: hidden;
     width: 100vw;
     padding-top: 15px;
-
     display: flex;
     justify-content: center;
+}
+#home{
+    position: absolute;
+    left: 20px;
+    cursor: pointer;
 }
 
 #barSearch{
@@ -65,6 +70,7 @@ main{
     border: 1px solid black;
     border-radius: 12px 12px 0 0;
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.89);
 }
 
 #gridPrevision{
@@ -133,4 +139,73 @@ h3{
 
 .iconeWeather img{
     max-height: 50px;
+}
+
+@media screen and (max-width: 1200px){
+    #ResultContainer{
+        width: 95vw;
+    }
+    #gridPrevision{
+        width: 95vw;
+    }
+}
+@media screen and (max-width: 700px){
+    #gridPrevision{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 7;
+        grid-template-areas: "d1" "d2" "d3" "d4" "d5" "d6" "d7";
+    }
+    #currentDay{
+        border-radius: 12px 12px 0 0;
+    }
+    #day2{
+        border-radius: 0 0 0 0;
+    }
+    #day3{
+        border-radius: 0 0 0 0;
+    }
+    #day4{
+        border-radius: 0 0 0 0;
+    }
+    #day5{
+        border-radius: 0 0 0 0;
+    }
+    #day6{
+        border-radius: 0 0 0 0;
+    }
+    #day{
+        border-radius: 0 0 12px 12px;
+    }
+}
+
+@media screen and (max-width: 550px){
+    #cityName{
+        height: 65px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    #search{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "home" "searchBar";
+    }
+    #home{
+        grid-area: home;
+        text-align: center;
+        position: unset;
+
+    }
+    #barSearch{
+        grid-area: searchBar;
+        width: 90vw;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 200px){
+    #cityName{
+        height: 90px;
+    }
 }

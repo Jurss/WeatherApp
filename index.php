@@ -2,7 +2,7 @@
     require_once('geoplugin.class/geoplugin.class.php');
 
     $geoplugin = new geoPlugin();
-    $geoplugin->locate('92.140.59.79');
+    $geoplugin->locate('92.140.59.79');//$_SERVER['REMOTE_ADDR']
 
     $location = $geoplugin->city;
     $country = $geoplugin->countryCode;
@@ -115,6 +115,7 @@
         echo $data;
     }
 
+
 ?>
 
 <!DOCTYPE html>
@@ -127,7 +128,7 @@
         <meta name="canonical" href="">
         <title>Météo</title>
         <link rel="icon" href="img/icons/c02d.png">
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="index.css?v=<?php echo time(); ?>">
     </head>
     <body>
         <header id="search">
@@ -154,7 +155,14 @@
                         </div>
                     </div>
                 </div>
+                <form action="form.php" method="post" enctype="multipart/form-data" id="hiddenForm">
+                    <input type="hidden" name="city" id="city" value="<?php echo $geoplugin->city; ?>">
+                    <button type="submit">
+                        <h3 id="previ">Prévision sur 7 jours à <?php echo $geoplugin->city; ?> (<?php echo $geoplugin->regionCode ?>)</h3>
+                    </button>
+                </form>
             </div>
+
         </main>
     </body>
 </html>
